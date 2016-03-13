@@ -1,0 +1,30 @@
+{
+  "name": "autocomplete",
+  "version": "1.0.0",
+  "description": "简便的自动补全插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lleobox/autocomplete.git"
+  },
+  "keywords": [
+    "autocomplete"
+  ],
+  "author": "lleohao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lleobox/autocomplete/issues"
+  },
+  "homepage": "https://github.com/lleobox/autocomplete#readme",
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5"
+  }
+}

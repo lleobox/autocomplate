@@ -1,0 +1,26 @@
+{
+  "name": "autocomplete",
+  "description": "简便的自动补全插件",
+  "main": "index.js",
+  "authors": [
+    "lleohao"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "autocomplete"
+  ],
+  "homepage": "https://github.com/lleobox/autocomplete",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1"
+  }
+}
