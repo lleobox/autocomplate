@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>autocomplete</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <form action="#">
+            <!--<div class="autocomplete-box">-->
+            <!--<input type="text" autocomplete="off" class="autocomplete" placeholder="Please input any word">-->
+            <!--<div class="autocomplete-changes">-->
+            <!--<ul>-->
+            <!--<li><a href="javascript: void(0)">java</a></li>-->
+            <!--<li><a href="javascript: void(0)">javascript</a></li>-->
+            <!--<li><a href="javascript: void(0)">js</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+            <input type="text" autocomplete="off" class="autocomplete" placeholder="Please input any word">
+        </form>
+    </div>
+</div>
+
+<script src="src/autocomplete.js"></script>
+<script>
+    $('.autocomplete').autocomplete(['java', 'javascript']);
+</script>
+</body>
+</html>
