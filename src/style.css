@@ -27,6 +27,7 @@ input {
 .autocomplete-changes {
     position: absolute;
     z-index: 999;
+    width: 100%;
 }
 
 .autocomplete-changes ul {
@@ -36,6 +37,7 @@ input {
     border-radius: 3px;
     margin-top: 2px;
     width: 90%;
+    display: none;
 }
 
 .autocomplete-changes ul li {
