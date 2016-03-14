@@ -34,19 +34,21 @@
                 if (keycode == '13') {
                     event.preventDefault();
                 }
+
             });
 
             self.keyup(function (event) {
-                var query = self.val();
-                ac.source(query, ac.showItem);
+                var query = self.val(), matchArr;
+                matchArr = ac.makeArr(query);
+                ac.source(query, matchArr, ac.showItem);
             });
         },
 
-        source: function (q, cb) {
+        source: function (q, matchArr, cb) {
             var qRegex, result, ac = this;
             if (q.length > 0) {
                 qRegex = new RegExp(q, "i");
-                result = ac.match_str.map(function (str) {
+                result = matchArr.map(function (str) {
                     if (qRegex.test(str)) {
                         return str;
                     } else {
@@ -73,9 +75,34 @@
                     display: 'block'
                 });
                 result.forEach(function (val) {
-                    var $item = $('<li></li>').append($('<a></a>').text(val));
+                    var $item = $('<li></li>').append($('<a href="javascript: void(0)"></a>').text(val));
+                    $item.on('click', function() {
+                        $('.autocomplete-box').children('input').val(val);
+                    });
                     $ul.append($item);
                 });
+            }
+        },
+
+        makeArr: function (query) {
+            var self = this, url, result;
+            if (self.match_str instanceof Array) {
+                return self.match_str;
+            } else {
+                //url = self.match_str + "data.json";
+                $.ajax({
+                    // 测试代码， 实际使用时需修改
+                    url: self.match_str + "data.json",
+                    type: 'get',
+                    data: query,
+                    async: false,
+                    dataType: 'json',
+                    success: function(data) {
+                        result = data['data'];
+                        console.log(result);
+                    }
+                });
+                return result;
             }
         }
     };
