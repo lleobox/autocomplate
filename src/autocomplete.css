@@ -1,0 +1,55 @@
+/* 清除默认样式 */
+* {margin: 0;padding: 0;}
+body {font-size: 14px;font-family: "Microsoft Jhenghei", "Microsoft YaHei", "微软雅黑", "Droid Serif", Georgia, Serif;  }
+ul {list-style: none;}
+input {border: 1px solid #CCCCCC;border-radius: 2px;padding: 8px 12px;}
+
+.wrap {
+    width: 100%;
+}
+
+.container {
+    width: 50%;
+    margin: 150px auto;
+}
+
+.autocomplete-box {
+    /* 确保提示框与输入框一样宽 */
+    display: inline-block;
+    position: relative;
+}
+
+.autocomplete-box .suggest-list {
+    position: absolute;
+    z-index: 999;
+    width: 90%;
+    border: 1px black solid;
+    border-radius: 3px;
+    margin-top: 2px;
+    display: none;
+}
+
+.suggest-list li {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.suggest-list li + li{
+    border-top: 1px solid #c0c0c0;
+}
+
+.suggest-list li:hover {
+    background-color: #c0c0c0;
+}
+
+.suggest-list li:focus {
+    outline: none;
+    background-color: #c0c0c0;
+}
+/* 兼容ie7 以下不支持focue 伪类 */
+.suggest-list .active {
+    background-color: #c0c0c0
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>autocomplete</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/autocomplete.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
@@ -11,14 +11,11 @@
     <div class="container">
         <form action="#">
             <!--<div class="autocomplete-box">-->
-            <!--<input type="text" autocomplete="off" class="autocomplete" placeholder="Please input any word">-->
-            <!--<div class="autocomplete-changes">-->
-            <!--<ul>-->
-            <!--<li><a href="javascript: void(0)">java</a></li>-->
-            <!--<li><a href="javascript: void(0)">javascript</a></li>-->
-            <!--<li><a href="javascript: void(0)">js</a></li>-->
-            <!--</ul>-->
-            <!--</div>-->
+                <!--<input type="text" autocomplete="off" class="autocomplete" placeholder="Please input any word">-->
+                <!--<ul class="suggest-list" tabindex="0">-->
+                    <!--<li tabindex="-1">java</li>-->
+                    <!--<li tabindex="-1">javascript</li>-->
+                <!--</ul>-->
             <!--</div>-->
             <input type="text" autocomplete="off" class="autocomplete" placeholder="Please input any word">
         </form>
@@ -27,8 +24,8 @@
 
 <script src="src/autocomplete.js"></script>
 <script>
-//    $('.autocomplete').autocomplete("http://localhost:63342/autocomplete/test_data/");
-$('.autocomplete').autocomplete(['javascript', 'java', 'python', 'html']);
+    //    $('.autocomplete').autocomplete("http://localhost:63342/autocomplete/test_data/");
+    $('.autocomplete').autocomplete(['javascript', 'java', 'python', 'html']);
 </script>
 </body>
 </html>
